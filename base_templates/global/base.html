@@ -1,14 +1,16 @@
-{% load static %} <!DOCTYPE html>
-<html lang="pt-bt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "global/css/style.css" %}">
-    <title>Document</title>
-</head>
+<html lang="pt-br">
+
+{% include "global/partials/_head.html" %}
+
 <body>
+
+        {% include "global/partials/_header.html" %}
+
     <main class="content">
         {% block content %}{% endblock content %}
     </main>
+
+    {% include "global/partials/pagination.html" %}
+
 </body>
 </html>
